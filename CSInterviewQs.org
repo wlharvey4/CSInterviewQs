@@ -1,10 +1,11 @@
 # -*- mode:org; -*-
 
 #+title:Computer Science Interview Questions
+#+subtitle Data Structures and Algorithms
 #+subtitle:{{{version}}} {{{date}}}
-#+author:LOLH
-#+date:2021-09-29 08:18
-#+macro:version Version 0.0.0
+#+author:Wayne W. Bishop
+#+date:2021-09-29 08:58
+#+macro:version Version 0.0.1
 #+macro:upload-date (eval (current-time-string))
 #+bucket:pinecone-forest.com
 
@@ -17,8 +18,101 @@
 :PROPERTIES:
 :unnumbered: t
 :END:
-* Chapter
-
+When  preparing for  a technical  interview,  mastery of  code language  syntax
+provides  a   great  start,   but  understanding   computer  science   is  also
+essential. Here  are the top  20 standard computer science  interview questions
+with hints to help you prepare for the next step in your development career.
+** How to Use
+The following questions are based on my own work, refined in collaboration with
+senior developers in  my program.  While questions can be  solved through basic
+collection types  (e.g., Array, Dictionary,  and Set), difficult  questions are
+easier  solved  through  advanced  data  structures,  algorithms  and  ways  of
+thinking.
+
+As  is  common in  software  development,  questions  are solved  in  different
+ways.  The trick  is  knowing  which approach  provides  the  best tradeoff  in
+consideration of time and space complexity.
+
+* Counting Sort Algorithm
+Given the  following array, produce  a list that  provides the number  of times
+each selected value has occurred in the series.
+
+: let sequence = [0, 1, 3, 1, 2, 4, 3, 2] 
+
+#+begin_example
+/*
+Results:
+0 seen 1 time
+1 seen 2 times
+3 seen 2 times
+4 seen 1 times
+2 seen 2 times
+*/
+#+end_example
+
+As  part of  your  solution, what  will  be your  input  and output  parameters
+(e.g.  function  signature)?   Will  a  recursive  solution  provide  increased
+benefits  relative to  space  or time?  Can  the question  be  solved using  an
+in-place design?  Why or why not?
+
+* kth Largest Element
+How would you find the 4th largest element?
+
+: let sequence: Array<Int> = [8, 806, 2, 4, 56]
+
+This question is quite well known but  does teach a variety of techniques.  One
+approach would be  to sort the array  to determine which values  come in order.
+However,  note the  question doesn’t  state  that the  values require  sorting.
+Since actual sorting is a traditionally  expensive operation, could be the data
+be transformed into a more efficient data structure?
+
+* Multiple Inheritance
+If asked in a technical interview, could  you explain or write code showing why
+Swift doesn't support multiple inheritance? What's the alternative?
+
+Even though the concept of multiple inheritance was once considered a must-have
+feature in languages  such as C++, most modern programming  languages like Java
+and Swift  only support single inheritance.  As part of your  analysis, can you
+think of why is no longer used?
+
+* Fibonacci Revisited
+If  asked  in  a  technical  interview,  how  would  you  improve  the  runtime
+performance of this code? Why would your version be more effective?
+
+#+begin_example
+func fib(_ n: Int) -> Int {
+    guard n > 1 else { return n }
+    return fib(n-1) + fib(n-2)
+}
+#+end_example
+
+When learning the  basics of recursive algorithms, the Fibonacci  sequence is a
+widely  used standard  for understanding  this process.   However, there  are a
+number  of ways  we can  write  this algorithm.   Even though  our function  is
+technically  correct, how  could  this  function be  improved?   What is  being
+implied when we say the algorithm is inefficient?
+
+* Tree Traversal
+If asked in a technical interview, what technique or algorithm would you use to
+print the following values in sequential order?
+
+[[file:resources/images/binary-tree.png][/usr/local/dev/programming/CS/CSInterviewQs/resources/images/binary-tree.png]]
+
+* Longest Sequence
+* Power of Two
+* Count of Occurrences
+* Reverse the Vowels
+* Pair of Numbers
+* Best Auction Bids
+* Find Common Element in Rows
+* Prefix and Suffix Search
+* Sorting Colors
+* Find Common Characters
+* Deck of Cards
+* Recreate a Swift Dictionary
+* Design a Call Center in Swift
+* Design a Parking Lot in Swift
+* Design a Siri Knowledge Graph
 * Build Tools
 :PROPERTIES:
 :appendix: t
